@@ -6,6 +6,7 @@ function ProgressStepElement({
   color,
   index,
   label,
+  item,
   description,
 }) {
   return (
@@ -13,9 +14,11 @@ function ProgressStepElement({
       <span class="circle">{index + 1}</span>
       <div class={`${label}`}>
         <br />
-        Step
+        {item}
         <br />
-        <span style={{ color: "#000000" }}>{description}</span>
+        <span style={{ color: "#000000", marginTop: "0.5rem" }}>
+          {description}
+        </span>
       </div>
     </div>
   );

@@ -11,17 +11,19 @@ function ProgressStep(props) {
     linecolor = "lineintial",
     description,
   } = props;
+
+  const steps = ["Sign up", "Enter OTP", "Success"];
   return (
-    <div class={`${direction} ${linecolor}`}>
-      {Array(3)
-        .fill(true)
-        .map((item, index) => (
+    <>
+      <div class={`${direction} ${linecolor}`}>
+        {steps.map((item, index) => (
           <ProgressStepElement
             key={index}
-            {...{ labeldirection, color, index, label, description }}
+            {...{ labeldirection, color, index, label, item, description }}
           />
         ))}
-    </div>
+      </div>
+    </>
   );
 }
 
