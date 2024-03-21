@@ -1,53 +1,26 @@
 import React from "react";
 import "./ProgressStep.css";
+import ProgressStepElement from "./ProgressStepElement";
 
 function ProgressStep(props) {
   const {
     color = "initial",
     direction = "horizontal",
-    position = "start",
-    lineDirection = "horizontalline",
     labeldirection = "down",
     label = "labeldown",
-    text = "textdown",
-    value,
+    linecolor = "lineintial",
     description,
   } = props;
   return (
-    <div className={`${direction} ${position}`}>
-      <div className={`${labeldirection}`}>
-        <div className={`circle ${color}`}>{value}</div>
-        <div className={`${text}`}>
-          <div className={`${label}`}>
-            Step <br />
-            <span>{description}</span>
-          </div>
-        </div>
-      </div>
-      <div>
-        <hr className={`${lineDirection}`} />
-      </div>
-      <div className={`${labeldirection}`}>
-        <div className={`circle ${color}`}>{value}</div>
-        <div className={`${text}`}>
-          <div className={`${label}`}>
-            Step <br />
-            <span>{description}</span>
-          </div>
-        </div>
-      </div>
-      <div>
-        <hr className={`${lineDirection}`} />
-      </div>
-      <div className={`${labeldirection}`}>
-        <div className={`circle ${color}`}>{value}</div>
-        <div className={`${text}`}>
-          <div className={`${label}`}>
-            Step <br />
-            <span>{description}</span>
-          </div>
-        </div>
-      </div>
+    <div class={`${direction} ${linecolor}`}>
+      {Array(3)
+        .fill(true)
+        .map((item, index) => (
+          <ProgressStepElement
+            key={index}
+            {...{ labeldirection, color, index, label, description }}
+          />
+        ))}
     </div>
   );
 }

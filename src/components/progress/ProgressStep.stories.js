@@ -9,9 +9,21 @@ export default {
       control: { type: "select" },
       options: ["initial", "done", "progress"],
     },
-    position: {
+    linecolor: {
       control: { type: "select" },
-      options: ["start", "center", "end"],
+      options: ["lineintial", "linedone", "lineprogress"],
+    },
+    direction: {
+      control: { type: "select" },
+      options: ["horizontal", "vertical"],
+    },
+    labeldirection: {
+      control: { type: "select" },
+      options: ["down", "up"],
+    },
+    label: {
+      control: { type: "select" },
+      options: ["labeldown", "labelup"],
     },
   },
   parameters: {
@@ -25,24 +37,22 @@ export default {
 
 export const Horizontal = {
   args: {
-    directional: "horizontal",
-    lineDirection: "horizontalline",
+    color: "initial",
+    linecolor: "lineintial",
+    direction: "horizontal",
     labeldirection: "down",
     label: "labeldown",
-    text: "textdown",
     description: "Horizontal",
-    value: "1",
   },
 };
 
 export const Vertical = {
   args: {
+    color: "initial",
+    linecolor: "lineintial",
     direction: "vertical",
-    lineDirection: "verticalline",
     labeldirection: "up",
     label: "labelup",
-    text: "textup",
     description: "Vertical",
-    value: "1",
   },
 };
