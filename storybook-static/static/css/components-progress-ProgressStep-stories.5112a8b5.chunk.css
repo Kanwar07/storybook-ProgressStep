@@ -1,0 +1,122 @@
+.horizontal {
+  position: absolute;
+  display: flex;
+  align-items: first baseline;
+  justify-content: space-between;
+  width: 30%;
+  margin: 4rem;
+}
+
+.horizontal::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 80%;
+  margin-left: 2rem;
+  background-color: #d9d9db;
+  z-index: 0;
+  margin-top: 12px;
+}
+
+.horizontal::after.lineintial {
+  background-color: #d9d9db;
+}
+
+.horizontal::after.linedone {
+  background-color: #47b647;
+}
+
+.horizontal::after .progress {
+  background-color: #47b647;
+}
+
+.vertical {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: space-between;
+  height: 50%;
+  margin: 4rem;
+}
+
+.vertical::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 80%;
+  margin-left: 0.75rem;
+  background-color: #ddd;
+  z-index: 0;
+  margin-top: 16px;
+}
+
+.down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 400;
+  z-index: 2;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 400;
+  z-index: 2;
+}
+
+.labeldown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intial .labeldown {
+  color: #d9d9db;
+}
+
+.done .labeldown {
+  color: #47b647;
+}
+
+.progress .labeldown {
+  color: #47b647;
+}
+
+.labelup {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  align-items: center;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid gray;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #dddddd;
+  color: #ffffff;
+}
+
+.intial .circle {
+  background-color: #d9d9db;
+}
+
+.done .circle {
+  background-color: #47b647;
+}
+
+.progress .circle {
+  color: #47b647;
+  background-color: #ffffff;
+  border: 2px solid #47b647;
+}
+
+
+/*# sourceMappingURL=components-progress-ProgressStep-stories.5112a8b5.chunk.css.map*/
