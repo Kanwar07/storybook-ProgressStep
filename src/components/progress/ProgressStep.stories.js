@@ -4,7 +4,6 @@ export default {
   title: "components/Progress Step",
   component: ProgressStep,
   argTypes: {
-    onClick: { action: "clicked" },
     color: {
       control: { type: "select" },
       options: ["initial", "done", "progress"],

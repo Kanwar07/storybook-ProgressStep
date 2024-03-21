@@ -18,15 +18,15 @@
   margin-top: 12px;
 }
 
-.horizontal::after.lineintial {
+.horizontal.lineinitial::after {
   background-color: #d9d9db;
 }
 
-.horizontal::after.linedone {
+.horizontal.linedone::after {
   background-color: #47b647;
 }
 
-.horizontal::after .progress {
+.horizontal.lineprogress::after {
   background-color: #47b647;
 }
 
@@ -48,7 +48,19 @@
   margin-left: 0.75rem;
   background-color: #ddd;
   z-index: 0;
-  margin-top: 16px;
+  margin-top: 18px;
+}
+
+.vertical.lineintial::after {
+  background-color: #d9d9db;
+}
+
+.vertical.linedone::after {
+  background-color: #47b647;
+}
+
+.vertical.lineprogress::after {
+  background-color: #47b647;
 }
 
 .down {
@@ -102,6 +114,7 @@
   border-radius: 50%;
   background-color: #dddddd;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .intial .circle {
