@@ -2,4 +2,4 @@
 
 ### Download the zip file.
 ### run commnad npm init
-### Run the command ## npm run storybook ### in terminal.
+### Run the command npm run storybook in terminal.
